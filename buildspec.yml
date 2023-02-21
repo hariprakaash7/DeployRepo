@@ -15,6 +15,6 @@ phases:
   post-build:
     commands:
       - echo build completed in 'date'
-  artifacts:
-    files:
-      - build/libs/AwsDeploy-0.0.1-SNAPSHOT.jar
+artifacts:
+  files:
+    - build/libs/AwsDeploy-0.0.1-SNAPSHOT.jar
