@@ -6,13 +6,13 @@ phases:
       java: coretto11
     commands:
       - echo Nothing to do in demo phase
-  pre-build:
+  pre_build:
     commands:
       - echo Nothing in pre-build phase
   build:
     commands:
       - echo Nothing in build
-  post-build:
+  post_build:
     commands:
       - echo build completed in 'date'
 artifacts:
