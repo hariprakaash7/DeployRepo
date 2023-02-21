@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: coretto11
+    commands:
+      - echo Nothing to do in demo phase
+  pre-build:
+    commands:
+      - echo Nothing in pre-build phase
+  build:
+    commands:
+      - echo Nothing in build
+  post-build:
+    commands:
+      - echo build completed in 'date'
+  artifacts:
+    files:
+      - build/libs/AwsDeploy-0.0.1-SNAPSHOT.jar

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.AwsDeploy.Controller.DummyControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-21T15:01:45" hostname="LAPTOP-APLPD5CP" time="0.056">
+<testsuite name="com.example.AwsDeploy.Controller.DummyControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-21T16:51:33" hostname="LAPTOP-APLPD5CP" time="0.09">
   <properties/>
-  <testcase name="shouldReturnHello()" classname="com.example.AwsDeploy.Controller.DummyControllerTest" time="0.056"/>
-  <system-out><![CDATA[2023-02-21T20:31:45.015+05:30  INFO 16196 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.AwsDeploy.Controller.DummyControllerTest]: DummyControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-02-21T20:31:45.028+05:30  INFO 16196 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.AwsDeploy.AwsDeployApplication for test class com.example.AwsDeploy.Controller.DummyControllerTest
+  <testcase name="shouldReturnHello()" classname="com.example.AwsDeploy.Controller.DummyControllerTest" time="0.09"/>
+  <system-out><![CDATA[2023-02-21T22:21:32.938+05:30  INFO 10132 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.AwsDeploy.Controller.DummyControllerTest]: DummyControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-02-21T22:21:32.953+05:30  INFO 10132 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.AwsDeploy.AwsDeployApplication for test class com.example.AwsDeploy.Controller.DummyControllerTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -13,12 +13,12 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.0.2)
 
-2023-02-21T20:31:45.059+05:30  INFO 16196 --- [    Test worker] c.e.A.Controller.DummyControllerTest     : Starting DummyControllerTest using Java 17.0.2 with PID 16196 (started by harip in F:\AwsDeploy)
-2023-02-21T20:31:45.060+05:30  INFO 16196 --- [    Test worker] c.e.A.Controller.DummyControllerTest     : No active profile set, falling back to 1 default profile: "default"
-2023-02-21T20:31:45.361+05:30  INFO 16196 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-02-21T20:31:45.361+05:30  INFO 16196 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-02-21T20:31:45.364+05:30  INFO 16196 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2023-02-21T20:31:45.375+05:30  INFO 16196 --- [    Test worker] c.e.A.Controller.DummyControllerTest     : Started DummyControllerTest in 0.341 seconds (process running for 3.528)
+2023-02-21T22:21:32.993+05:30  INFO 10132 --- [    Test worker] c.e.A.Controller.DummyControllerTest     : Starting DummyControllerTest using Java 17.0.2 with PID 10132 (started by harip in F:\AwsDeploy)
+2023-02-21T22:21:32.994+05:30  INFO 10132 --- [    Test worker] c.e.A.Controller.DummyControllerTest     : No active profile set, falling back to 1 default profile: "default"
+2023-02-21T22:21:33.363+05:30  INFO 10132 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-02-21T22:21:33.363+05:30  INFO 10132 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-02-21T22:21:33.367+05:30  INFO 10132 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-02-21T22:21:33.375+05:30  INFO 10132 --- [    Test worker] c.e.A.Controller.DummyControllerTest     : Started DummyControllerTest in 0.417 seconds (process running for 4.015)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
