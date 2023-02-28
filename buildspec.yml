@@ -11,6 +11,8 @@ phases:
       - echo Nothing in pre-build phase
   build:
     commands:
+      - sudo chmod +x gradlew
+      - echo Hello
       - ./gradlew clean build
   post_build:
     commands:
