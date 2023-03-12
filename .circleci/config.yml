@@ -9,10 +9,11 @@ jobs:
           name: Installing zip
           command: sudo apt-get install zip
       - run:
+          name: Changing the file permissions
+          command: sudo chmod +x ./gradlew
+      - run:
           name: Building the app
-          command: |
-            sudo chmod +x ./gradlew
-           ./gradlew clean build
+          command: ./gradlew clean build
       - run:
           name: create a directory
           command: sudo mkdir innovation_ideas
