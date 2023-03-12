@@ -45,11 +45,10 @@ jobs:
       - run:
           name: Create a directory
           command: |
-            sudo mkdir innovation_ideas
-            sudo cp build/libs/AwsDeploy-0.0.1-SNAPSHOT.jar innovation_ideas
-            ls -lrt
+            sudo apt-get install zip
+            sudo zip innovation.zip build/libs/AwsDeploy-0.0.1-SNAPSHOT.jar
       - aws-s3/copy:
-          from: innovation_ideas/
+          from: innovation.zip
           to: 's3://circle-ci-demo/'
 workflows:
   build_and_test:
