@@ -23,7 +23,6 @@ jobs:
           root: .
           paths:
             - build/libs/AwsDeploy-0.0.1-SNAPSHOT.jar
-
   test:
     docker:
       - image: cimg/openjdk:17.0.5
@@ -33,19 +32,19 @@ jobs:
           name: Change permissions
           command: sudo chmod +x ./gradlew
       - run: ./gradlew test
-    deploy:
-      docker:
-        - image: cimg/openjdk:17.0.5
-      steps:
-        - attach_workspace:
-              at: .
-        - checkout
-        - run:
-            name: Get the files
-            command: ls -lrt
-        - aws-s3/copy:
-            from: build/libs/AwsDeploy-0.0.1-SNAPSHOT.jar
-            to: 's3://circle-ci-demo/'
+  deploy:
+    docker:
+      - image: cimg/openjdk:17.0.5
+    steps:
+      - attach_workspace:
+            at: .
+      - checkout
+      - run:
+          name: Get the files
+          command: ls -lrt
+      - aws-s3/copy:
+          from: build/libs/AwsDeploy-0.0.1-SNAPSHOT.jar
+          to: 's3://circle-ci-demo/'
 workflows:
   build_and_test:
     jobs:
