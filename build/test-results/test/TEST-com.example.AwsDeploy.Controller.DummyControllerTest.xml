@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.AwsDeploy.Controller.DummyControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-28T14:55:14" hostname="LAPTOP-APLPD5CP" time="0.08">
+<testsuite name="com.example.AwsDeploy.Controller.DummyControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-12T04:37:18" hostname="LAPTOP-APLPD5CP" time="0.686">
   <properties/>
-  <testcase name="shouldReturnHello()" classname="com.example.AwsDeploy.Controller.DummyControllerTest" time="0.08"/>
-  <system-out><![CDATA[2023-02-28T20:25:13.998+05:30  INFO 12148 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.AwsDeploy.Controller.DummyControllerTest]: DummyControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-02-28T20:25:14.013+05:30  INFO 12148 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.AwsDeploy.AwsDeployApplication for test class com.example.AwsDeploy.Controller.DummyControllerTest
+  <testcase name="shouldReturnHello()" classname="com.example.AwsDeploy.Controller.DummyControllerTest" time="0.686"/>
+  <system-out><![CDATA[10:07:15.485 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [DummyControllerTest]: using SpringBootContextLoader
+10:07:15.491 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.AwsDeploy.Controller.DummyControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+10:07:15.492 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.AwsDeploy.Controller.DummyControllerTest]: DummyControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+10:07:15.549 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [DummyControllerTest]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ImportsContextCustomizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
+10:07:15.655 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [F:\AwsDeploy\build\classes\java\main\com\example\AwsDeploy\AwsDeployApplication.class]
+10:07:15.658 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.AwsDeploy.AwsDeployApplication for test class com.example.AwsDeploy.Controller.DummyControllerTest
+10:07:16.045 [Test worker] DEBUG org.springframework.test.context.util.TestContextSpringFactoriesUtils - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+10:07:16.048 [Test worker] DEBUG org.springframework.test.context.util.TestContextSpringFactoriesUtils - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+10:07:16.050 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [DummyControllerTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+10:07:16.052 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: class [DummyControllerTest], class annotated with @DirtiesContext [false] with mode [null]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -13,12 +21,12 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.0.2)
 
-2023-02-28T20:25:14.048+05:30  INFO 12148 --- [    Test worker] c.e.A.Controller.DummyControllerTest     : Starting DummyControllerTest using Java 17.0.2 with PID 12148 (started by harip in F:\AwsDeploy)
-2023-02-28T20:25:14.049+05:30  INFO 12148 --- [    Test worker] c.e.A.Controller.DummyControllerTest     : No active profile set, falling back to 1 default profile: "default"
-2023-02-28T20:25:14.400+05:30  INFO 12148 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-02-28T20:25:14.400+05:30  INFO 12148 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-02-28T20:25:14.404+05:30  INFO 12148 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2023-02-28T20:25:14.416+05:30  INFO 12148 --- [    Test worker] c.e.A.Controller.DummyControllerTest     : Started DummyControllerTest in 0.397 seconds (process running for 3.909)
+2023-03-12T10:07:16.445+05:30  INFO 17816 --- [    Test worker] c.e.A.Controller.DummyControllerTest     : Starting DummyControllerTest using Java 17.0.2 with PID 17816 (started by harip in F:\AwsDeploy)
+2023-03-12T10:07:16.447+05:30  INFO 17816 --- [    Test worker] c.e.A.Controller.DummyControllerTest     : No active profile set, falling back to 1 default profile: "default"
+2023-03-12T10:07:17.959+05:30  INFO 17816 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-03-12T10:07:17.959+05:30  INFO 17816 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-03-12T10:07:17.963+05:30  INFO 17816 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2023-03-12T10:07:17.998+05:30  INFO 17816 --- [    Test worker] c.e.A.Controller.DummyControllerTest     : Started DummyControllerTest in 1.869 seconds (process running for 3.679)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
