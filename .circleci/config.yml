@@ -1,4 +1,6 @@
 version: 2.1
+orbs:
+  aws-s3: circleci/aws-s3@3.1.1
 jobs:
   build:
     docker:
@@ -15,17 +17,12 @@ jobs:
           name: Building the app
           command: ./gradlew clean build
       - run:
-          name: create a directory
-          command: sudo mkdir innovation_ideas
-      - run:
           name: Copy the contents
-          command: |
-            sudo cp build/libs/AwsDeploy-0.0.1-SNAPSHOT.jar innovation_ideas
-            ls -lrt
+          command: ls -lrt
       - persist_to_workspace:
-          root: innovation_ideas
+          root: .
           paths:
-            - AwsDeploy-0.0.1-SNAPSHOT.jar
+            - build/libs/AwsDeploy-0.0.1-SNAPSHOT.jar
 
   test:
     docker:
@@ -36,7 +33,19 @@ jobs:
           name: Change permissions
           command: sudo chmod +x ./gradlew
       - run: ./gradlew test
-
+    deploy:
+      docker:
+        - image: cimg/openjdk:17.0.5
+      steps:
+        - attach_workspace:
+              at: .
+        - checkout
+        - run:
+            name: Get the files
+            command: ls -lrt
+        - aws-s3/copy:
+            from: build/libs/AwsDeploy-0.0.1-SNAPSHOT.jar
+            to: 's3://circle-ci-demo/'
 workflows:
   build_and_test:
     jobs:
@@ -44,3 +53,6 @@ workflows:
       - test:
           requires:
             - build
+      - deploy:
+          requires:
+            - test
