@@ -10,7 +10,9 @@ jobs:
           command: sudo apt-get install zip
       - run:
           name: Building the app
-          command: ./gradlew clean build
+          command: |
+            sudo chmod +x ./gradlew
+           ./gradlew clean build
       - run:
           name: create a directory
           command: sudo mkdir innovation_ideas
