@@ -19,25 +19,28 @@ jobs:
           command: sudo mkdir innovation_ideas
       - run:
           name: Copy the contents
-          command: sudo cp build/libs/AwsDeploy-0.0.1-SNAPSHOT.jar innovation_ideas
+          command: |
+            sudo cp build/libs/AwsDeploy-0.0.1-SNAPSHOT.jar innovation_ideas
+            ls -lrt
       - persist_to_workspace:
           root: innovation_ideas
           paths:
             - AwsDeploy-0.0.1-SNAPSHOT.jar
 
-#  test:
-#    docker:
-#      - image: cimg/<language>:<version TAG>
-#        auth:
-#          username: mydockerhub-user
-#          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
-#    steps:
-#      - checkout
-#      - run: echo "this is the test job"
+  test:
+    docker:
+      - image: cimg/openjdk:17.0.5
+    steps:
+      - checkout
+      - run:
+          name: Change permissions
+          command: sudo chmod +x ./gradlew
+      - run: ./gradlew test
 
-# Orchestrate our job run sequence
 workflows:
   build_and_test:
     jobs:
       - build
-#      - test
+      - test:
+          requires:
+            -build
