@@ -19,7 +19,7 @@ jobs:
           command: sudo mkdir innovation_ideas
       - run:
           name: Copy the contents
-          command: cp build/libs/AwsDeploy-0.0.1-SNAPSHOT.jar innovation_ideas
+          command: sudo cp build/libs/AwsDeploy-0.0.1-SNAPSHOT.jar innovation_ideas
       - persist_to_workspace:
           root: innovation_ideas
           paths:
