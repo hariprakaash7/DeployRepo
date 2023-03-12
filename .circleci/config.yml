@@ -46,7 +46,7 @@ jobs:
           name: Create a directory
           command: |
             sudo apt-get install zip
-            sudo zip innovation.zip build/libs/AwsDeploy-0.0.1-SNAPSHOT.jar buildspec.yml
+            sudo zip innovation.zip build/libs/AwsDeploy-0.0.1-SNAPSHOT.jar appspec.yml scripts/fix_privileges.sh scripts/server_clear.sh scripts/server_start.sh scripts/server_stop.sh
       - aws-s3/copy:
           from: innovation.zip
           to: 's3://circle-ci-demo/'
